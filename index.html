@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+<body class="body">
+  <header class="header">
+    <div class="player">
+      <div class="player-controls">
+        <div class="player-block">
+          <button class="play-prev player-icon"></button>
+          <button class="play player-icon"></button>
+          <button class="play-next player-icon"></button>
+        </div> 
+        <div class="progress-text-wrapper">
+          <span class="current-audio">Aqua Caelestis</span>
+          <input class="progress-bar time-progress" type="range" name="time" min="0" max="100" step="0.05" value="0">
+        </div>
+        <div class="audio-time">
+          <span class="audio-current-time"></span>
+        </div>
+        <div class="audio-icon"></div>
+        <input class="progress-bar volume-progress" type="range" name="volume" min="0" max="100" step="0.05" value="100">
+      </div>
+      <ul class="play-list"></ul>
+    </div>
+    <div class="weather">
+      <input type="text" class="city" placeholder="[Enter city]"/>
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time"></time>
+    <date class="date"></date>
+    <div class="greeting-container">
+      <span class="greeting"></span>
+      <input type="text" class="name" placeholder="[Enter Name]">
+    </div>
+  </main>
+  <footer class="footer">
+    <button class="change-quote"></button>
+    <div class="settings-block">
+      <div class="settings-wrapper">
+        <div class="language">
+          <p class="language-text">Language</p>
+          <select class="language-select" name="language">
+            <option class="select-opt1" value="en">English</option>
+            <option class="select-opt2" value="ru">Russian</option>
+          </select>
+        </div>
+        <div class="setting">
+          <p class="setting-text">Background image</p>
+          <div class="background-choice">
+            <div class="choice-item">
+              <p class="choice-text">GitHub</p>
+              <input class="choice-input" checked type="radio" name="background" id="GitHub">
+            </div>
+            <div class="choice-item">
+              <input class="tags unsplash-tags" type="text" name="tags" placeholder="Tags">
+              <p class="choice-text">Unsplash</p>
+              <input class="choice-input" type="radio" name="background" id="Unsplash">
+            </div>
+            <div class="choice-item">
+              <input class="tags flick-tags" type="text" name="tags" placeholder="Tags">
+              <p class="choice-text">Flick</p>
+              <input class="choice-input" type="radio" name="background" id="Flick">
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <p class="display-text">Display</p>
+          <div class="time-display">
+            <p class="time-content Time">Time</p>
+            <input class="display-input" type="checkbox" checked name="time" id="1">
+          </div>
+          <div class="time-display">
+            <p class="time-content Date">Date</p>
+            <input class="display-input" type="checkbox" checked name="date" id="3">
+          </div>
+          <div class="time-display">
+            <p class="time-content Greeting">Greeting</p>
+            <input class="display-input" type="checkbox" checked name="greeting-container" id="4">
+          </div>
+          <div class="time-display">
+            <p class="time-content Weather">Weather</p>
+            <input class="display-input" type="checkbox" checked name="weather" id="5">
+          </div>
+          <div class="time-display">
+            <p class="time-content Player">Player</p>
+            <input class="display-input" type="checkbox" checked name="player" id="6">
+          </div>
+          <div class="time-display">
+            <p class="time-content Quote">Quotes</p>
+            <input class="display-input" type="checkbox" checked name="quote" id="6">
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="settings"></div>
+    <div class="to-do">To-do</div>
+    <div class="to-do-list">
+      <div class="to-do-wrapper">
+        <div class="to-do-title">
+          <h2 class="to-do-text">Today</h2>
+          <input class="to-do-inpur" type="text" name="to-do" id="" placeholder="Add to list">
+          <ul class="todos"></ul>
+        </div>
+        <div class="buttons">
+          <button class="save button-item">Save</button>
+          <button class="clear button-item">Clear</button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="quote"></div>
+      <div class="author"></div>
+    </div>
+  </footer>
+  <script type="module" src="js/translate.js"></script>
+  <script type="module" src="js/APi.js"></script>
+  <script type="module" src="js/script.js"></script>
+  <script type="module" src="js/to-do.js"></script>
+  <script type="module" src="js/playList.js"></script>
+</body>
+</html>
