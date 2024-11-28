@@ -185,7 +185,7 @@ function setBg() {
     const img = new Image()
     const bgNum = randomNum.toString().padStart(2, 0)
     const timeOfDay = getTimeOfDay()
-    img.src = `https://raw.githubusercontent.com/HandleWith/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`
+    img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`
     img.onload = () => {
         body.style.backgroundImage = `url(${img.src})`
     } 
